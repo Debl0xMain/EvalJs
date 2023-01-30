@@ -2,16 +2,18 @@ const CheckText = new RegExp('^[a-zA-Z]{2,}$', 'i');
 const CheckPostalCode = new RegExp('^[0-9]{5}$', 'i');
 const CheckEmail = new RegExp('^[a-zA-Z0-9.-]+[@]+[a-zA-Z0-9.-]+[.]+[a-z]{2,10}$', 'i');
 const CheckTextArea = new RegExp('^[a-zA-Z0-9.-_ ]{2,}$', 'i');
+let optiondisable = document.querySelector('option');
+optiondisable.setAttribute('hidden','');
+
 
 export const checkform = (e) => {
     var prenom = document.getElementById('prenom').value;
     var nom = document.getElementById('nom').value;
     var cpostal = document.getElementById('cp').value;
     var email = document.getElementById('email').value;
-    let optiondisable = document.querySelector('option');
     let select = document.querySelector('select');
     var textarea = document.getElementById('votrequestion').value;
-    optiondisable.setAttribute('hidden','');
+
 
     if (CheckText.test(nom.trim()) == false) {
         $("#msgnom").html("*Le nom rentré n'est pas valide");
