@@ -7,7 +7,7 @@ export const ex2 = () => {
 
     $('#ex2insert').html("");
 
-    const multi = (tablede) => {
+    const multi = () => {
         do{
             numero++;
             resultat = start * tablede ;

@@ -1,4 +1,5 @@
 export const ex3 = () => {
+    $('#ex3insert').html("");
     var table = ["Audrey","Aurélien","Flavien","Jérémy"];
     var tablesup = "";
     var insert = prompt(table);
